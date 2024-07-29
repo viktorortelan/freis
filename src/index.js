@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Cabecalho from './components/cabe';
 import App from './pages/app';
 import Sobre from './pages/sobre';
 import ExerUm from './pages/exerUm';
 
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Cabecalho/>
-   <ExerUm/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App/>} />
+        <Route path='/sobre' element={<Sobre/>} />
+        <Route path='/exerUm' element={<ExerUm/>} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
