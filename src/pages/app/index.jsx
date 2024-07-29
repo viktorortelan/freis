@@ -24,19 +24,19 @@ export default function App() {
             <div className="card1">
               <div className="yellow"></div>
               <h1>Cupom de desconto</h1>
-              <a href="">Exercício 01</a>
+              <Link to='/exerUm'>Exercício 01</Link>
             </div>
 
             <div className="card2">
               <div className="green"></div>
               <h1>Converter Kg/gramas</h1>
-              <a href="">Exercício 02</a>
+              <Link to='/exerDois'>Exercício 02</Link>
             </div>
 
             <div className="card3">
               <div className="blue"></div>
               <h1>Valor total por quantidade</h1>
-              <a href="">Exercício 03</a>
+              <Link to='/exerTres'>Exercício 03</Link>
             </div>
           </div>
         </div>

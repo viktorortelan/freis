@@ -12,8 +12,8 @@ export default function ExerUm() {
           </div>
 
           <div className="cab2">
-            <a href="">inicio</a>
-            <a href="">sobre</a>
+          <Link to="/">inicio</Link>
+          <Link to="/sobre">Sobre</Link>
           </div>
         </div>
 

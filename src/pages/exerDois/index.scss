@@ -1,0 +1,133 @@
+.exercicio_dois{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 1000px;
+    gap: 10px;
+
+
+    .cab{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 800px;
+        background-color: #6278F7;
+        width: 100%;
+        height: 90px;
+      }
+    
+        .cab1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+    
+            h1{
+            font: 400 22px roboto;
+            color: #fff;
+            }
+        }
+    
+        .cab2{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          
+          gap: 20px;
+    
+          a{
+            text-decoration: none;
+            font: 400 20px roboto;
+            color: #fff;
+          }
+    
+      }
+        .cab1 img{
+          height: 51px;
+        }
+
+        .info1{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-left: -630px;
+          gap: 10px;
+          padding: 50px 0px 20px 0px;
+  
+          #seta{
+              width: 40px;
+          }
+  
+  
+      }
+  
+      .linhaGreen{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-left: 5px;
+          align-items: center;
+          background-color: #B3FF37;
+          height: 3px;
+          width: 89%;
+      }
+
+
+      .info2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 12px;
+        width: 1200px;
+        height: 200px;
+
+        h1{
+          font: 700 16px roboto;
+
+        }
+      }
+
+      .cartao {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 350px;
+        height: 120px;
+        background-color: #fff;
+        border-radius: 12px;
+        gap: 10px;
+        margin-top: 20px;
+
+        h1{
+          font: 700 14px roboto;
+        }
+
+        button{
+          align-self: flex-end;
+          border: none;
+          padding: 10px 30px ;
+          border-radius:5px ;
+          color: #fff;
+          cursor: pointer;
+          font: 700 14px roboto;
+          background-color: #6278F7;
+          margin-top: 15px;
+        }
+
+        input{
+          outline: none;
+          border: 1px solid #A5A5A5;
+          border-radius: 12px;
+          padding: 5px 10px;
+        }
+      }
+      p{
+        width: 370px;
+        text-align: end;
+        font: 700 16px roboto;
+      }
+}
