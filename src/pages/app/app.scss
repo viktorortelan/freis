@@ -1,0 +1,110 @@
+.maeApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  height: 100vh;
+
+    .conteiner2 {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-left: -300px;
+      gap: 10px;
+
+      .cartoes{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+      }
+      .card1 {
+        display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      width: 215px;
+      height: 158px;
+      border-radius: 12px;
+      background-color: #fff;
+
+
+      .yellow{
+        height: 60px;
+        width: 60px;
+        background-color: #FFCE37;
+        border-radius: 12px;
+      }
+      h1{
+        font: 700 14px roboto;
+        color: #383131;
+      }
+
+      a{
+        font: 400 14px roboto;
+        color: #383131;
+        text-decoration: none;
+      }
+      }
+
+      .card2 {
+        display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      width: 215px;
+      height: 158px;
+      border-radius: 12px;
+      background-color: #fff;
+
+
+      .green{
+        height: 60px;
+        width: 60px;
+        background-color: #B3FF37;
+        border-radius: 12px;
+      }
+      h1{
+        font: 700 14px roboto;
+        color: #383131;
+      }
+
+      a{
+        font: 400 14px roboto;
+        color: #383131;
+        text-decoration: none;
+      }
+      }
+
+      .card3 {
+        display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      width: 215px;
+      height: 158px;
+      border-radius: 12px;
+      background-color: #fff;
+
+
+      .blue{
+        height: 60px;
+        width: 60px;
+        background-color: #37FFF3;
+        border-radius: 12px;
+      }
+      h1{
+        font: 700 14px roboto;
+        color: #383131;
+      }
+
+      a{
+        font: 400 14px roboto;
+        color: #383131;
+        text-decoration: none;
+      }
+      }
+    }
+}
