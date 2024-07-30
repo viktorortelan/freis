@@ -5,6 +5,7 @@ import ExerUm from "./pages/exerUm";
 import NotFound from "./pages/notFound";
 import ExerDois from "./pages/exerDois";
 import ExerTres from "./pages/exerTres";
+import Evento from "./pages/eventos";
 
 export default function Navegacao() {
   return (
@@ -15,6 +16,7 @@ export default function Navegacao() {
             <Route path="/exerUm" element={<ExerUm />} />
             <Route path="/exerDois" element={<ExerDois />} />
             <Route path="/exerTres" element={<ExerTres />} />
+            <Route path="/eventos" element={<Evento/>}/>
 
 
 

@@ -38,6 +38,12 @@ export default function App() {
               <h1>Valor total por quantidade</h1>
               <Link to='/exerTres'>Exercício 03</Link>
             </div>
+
+            <div className="card4">
+              <div className="blue"></div>
+              <h1>eventos</h1>
+              <Link to='/eventos'>Exercício 04</Link>
+            </div>
           </div>
         </div>
       </div>

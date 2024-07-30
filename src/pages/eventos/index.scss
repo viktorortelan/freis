@@ -1,0 +1,85 @@
+.Pagina_evento{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    gap: 2px;
+
+    .cabecalho{
+        display: flex;
+        flex-direction: row;
+        background-color: #6278F7;
+        padding: 20px 50px;
+        font: 700 16px roboto;
+        color: #fff;
+
+    }
+
+    .secao{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 30px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 10px gray;
+        border: 1px solid #000000d8;
+        background-color: #fff;
+        width: 400px;
+        padding: 20px;
+        
+        
+        .info{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: start;
+            
+        
+            h1{
+              font: 700 20px roboto;  
+            }
+            p{
+                font: 400 14px roboto;
+            }
+            
+            input{
+                padding: 5px 10px;
+                font: 400 14px roboto;
+                border: 1px solid rgb(172, 167, 167);
+                width: 100px;
+                border-radius: 5px;
+            }
+
+            select{
+                padding: 5px 10px;
+                font: 400 14px roboto;
+                border: 1px solid rgb(172, 167, 167);
+                width: 122px;
+                border-radius: 5px;
+            }
+
+            button{
+                align-self: flex-end;
+                padding: 15px 50px;
+                background-color: #0b2ffa;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                font: 700 14px roboto;
+                
+            }
+
+            .um{
+                font: 400 18px roboto;
+            }
+            
+            .dois{
+                display: flex;
+                flex-direction: row;
+                
+                font: 400 18px roboto;
+            }
+
+        }
+
+    }
+}
