@@ -1,7 +1,23 @@
 import "./index.scss";
 import { Link } from "react-router-dom";
+import{useState} from "react"
+
+
 
 export default function ExerDois() {
+
+const[valor,setValor] = useState(0)
+const[Result,setResult] = useState(0)
+
+
+function calc(){
+
+
+let calc1 = valor
+  setResult(valor * 1000)
+
+
+}
   return (
     <div className="exercicio_dois">
       <div className="cab">
@@ -34,10 +50,10 @@ export default function ExerDois() {
 
       <div className="cartao">
         <h1>Valor em gramas</h1>
-        <input type="number" placeholder="0" />
-        <button>Executar</button>
+        <input type="text" placeholder="0" value={valor} onChange={parametro => setValor(parametro.target.value)} />
+        <button onClick={calc}>Executar</button>
       </div>
-      <p>Resultado: O total é R$ 0,00</p>
+      <p>Resultado: O total é {Result}</p>
     </div>
   );
 }

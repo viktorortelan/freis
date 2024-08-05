@@ -1,8 +1,36 @@
 
 import './index.scss';
 import {Link} from 'react-router-dom';
+import{useState} from "react"
 
 export default function ExerTres() {
+
+  const[valorp,setValorp] = useState(0)
+  const[valorm,setValorm] = useState(0)
+  const[valorg,setValorg] = useState(0)
+  const[resp,setResp] = useState(0)
+
+function calc(){
+  let total = 0;
+let precos = {
+  PQ:13.50,
+  MD: 15.0,
+  GD: 17.50
+}
+
+if(valorp > 0) {
+  total += precos.PQ * valorp
+}
+if(valorp > 0) {
+  total += precos.MD * valorm
+}
+if(valorp > 0) {
+  total += precos.GD * valorg
+}
+
+setResp(total)
+
+}
     return (
         <div className="exercicio_tres">
             <div className="cab">
@@ -35,22 +63,22 @@ export default function ExerTres() {
         <div className="info">
           <div className="cardInfo">
             <p>Quantidade pequeno</p>
-            <input type="number" name="" id="" />
+            <input type="text" value={valorp} onChange={event => setValorp(event.target.value)} />
           </div>
 
           <div className="cardInfo">
-            <p>Quantidade pequeno</p>
-            <input type="number" name="" id="" />
+            <p>Quantidade medio</p>
+            <input type="text" value = {valorm} onChange={event => setValorm(event.target.value)}/>
           </div>
 
           <div className="cardInfo">
-            <p>Quantidade pequeno</p>
-            <input type="number" name="" id="" />
+            <p>Quantidade grande</p>
+            <input type="text"  value = {valorg}onChange={event =>setValorg(event.target.value)}/>
           </div>
         </div>
-          <button>Executar</button>
+          <button onClick={calc}>Executar </button>
       </div>
-      <p>Resultado: O total é R$ 0,00</p>
+      <p>Resultado: O total é R${resp}</p>
 
       
 
