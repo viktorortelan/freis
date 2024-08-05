@@ -6,6 +6,7 @@ import NotFound from "./pages/notFound";
 import ExerDois from "./pages/exerDois";
 import ExerTres from "./pages/exerTres";
 import Evento from "./pages/eventos";
+import Estado from "./pages/estado";
 
 export default function Navegacao() {
   return (
@@ -17,6 +18,7 @@ export default function Navegacao() {
             <Route path="/exerDois" element={<ExerDois />} />
             <Route path="/exerTres" element={<ExerTres />} />
             <Route path="/eventos" element={<Evento/>}/>
+            <Route path="/estado" element={<Estado/>}/>
 
 
 

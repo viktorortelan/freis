@@ -44,6 +44,17 @@ export default function App() {
               <h1>eventos</h1>
               <Link to='/eventos'>Exercício 04</Link>
             </div>
+
+           
+          </div>
+
+          <div className="cartoes2">
+
+          <div className="card5">
+              <div className="blue"></div>
+              <h1>estado</h1>
+              <Link to='/estado'>Exercício 05</Link>
+            </div>
           </div>
         </div>
       </div>
