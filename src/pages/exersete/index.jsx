@@ -4,20 +4,21 @@ import{useState} from "react"
 
 
 
-export default function ExerDois() {
+export default function ExerSete() {
+const [Numero, setNumero] = useState(0);
+const [ tabuda, setTabuada] = useState([]);
+function calculo(){
+    let tabuadas = []
+    for(let i = 0; i <= 10; i++){
+        let conta = Numero * i;
+        tabuadas[i] = `${Numero} * ${i} = ${conta}`
+    } 
 
-const[valor,setValor] = useState(0)
-const[Result,setResult] = useState(0)
-
-
-function calc(){
-
-
-let calc1 = valor
-  setResult(valor * 1000)
-
+    setTabuada(tabuadas);
 
 }
+
+
   return (
     <div className="exercicio_dois">
       <div className="cab">
@@ -38,22 +39,34 @@ let calc1 = valor
           src="https://media.discordapp.net/attachments/837420691666108437/1267483317692010528/seta.png?ex=66a8f353&is=66a7a1d3&hm=a453e369b533049abf9d4ab68bbcf97c6745a57154df36a31733f677d857383d&=&format=webp&quality=lossless"
           alt=""
         />
-        <h1>Exercício 02 - Converter Kg/gramas</h1>
+        <h1>Exercício 07 - tabuada</h1>
       </div>
       <div className="linhaGreen"></div>
 
       <div className="info2">
         <h1>
-          Implementar um programa em Javascript para converter kilos em gramas.
+        Implemente um programa em Javascript que escreva a tabuada de um número informado pelo usuário. A mensagem deve estar no formato ”A x B = X”.
         </h1>
       </div>
 
       <div className="cartao">
-        <h1>Valor em gramas</h1>
-        <input type="text" placeholder="0" value={valor} onChange={parametro => setValor(parametro.target.value)} />
-        <button onClick={calc}>Executar</button>
+        <h1>Tabuada do</h1>
+        <input type="text" placeholder="informe o numero" value={Numero} onChange={e => setNumero(e.target.value)} />
+        <button onClick={calculo}>Executar</button>
       </div>
-      <p>Resultado: O total é {Result}</p>
+      <div className="resp">
+        {tabuda.map(item =>
+                    <h3>{item}</h3>
+                )}
+      </div>
     </div>
   );
 }
+
+
+
+
+
+
+
+

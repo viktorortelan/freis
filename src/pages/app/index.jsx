@@ -55,6 +55,18 @@ export default function App() {
               <h1>estado</h1>
               <Link to='/estado'>Exercício 05</Link>
             </div>
+
+            <div className="card6">
+              <div className="blue"></div>
+              <h1>Livro</h1>
+              <Link to='/livroEXer'>Exercício 06</Link>
+            </div>
+
+            <div className="card7">
+              <div className="blue"></div>
+              <h1>tabuada</h1>
+              <Link to='/exersete'>Exercício 07</Link>
+            </div>
           </div>
         </div>
       </div>
