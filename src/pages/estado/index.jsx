@@ -18,8 +18,6 @@ function alteraTitulo(event) {
     setSecao1(novoValor);
 }
 
-
-
 const [num1, setNum1] = useState(0);
 const [num2, setNum2] = useState(0);
 const [res, setRes] = useState(0);
@@ -35,19 +33,29 @@ const [totalIng, setTotalIng] = useState('');
 
 function calcularIngresso(){
     let tot = 0;
-    if(meioIng == true) {
+    if(meioIng === true) {
         tot = qtdIng * 15.00;
     } else{
         tot = qtdIng * 30.00
     }
 
-    if(cupom == 'QUERO50') {
+    if(cupom === 'QUERO50') {
         let desc = (tot * 50) / 100;
         tot = tot - desc;
     }
 
     setTotalIng(tot)
 }
+
+const [novaMeta, setNovaMeta] = useState('');
+const [listaMeta, setListaMeta] = useState([]);
+function AddMeta() {
+    if(novaMeta != '') {
+
+        setListaMeta([...listaMeta, novaMeta])
+    }
+}
+
 
 
     return(
@@ -63,6 +71,21 @@ function calcularIngresso(){
             <Link to="/sobre">Sobre</Link>
           </div>
         </div>
+
+        <div className="metas">
+            <h1>Metas para os proximos 5 anos </h1>
+
+            <div className='infos'>
+                <input type="text" placeholder='digite suas metas' value={novaMeta} onChange={e => setNovaMeta(e.target.value)}/>
+                <button onClick={AddMeta}>Adicionar</button>
+            </div>
+            <ul>
+                {listaMeta.map(item =>
+                    <li>{item}</li>
+                ) }
+            </ul>
+        </div>
+
 
         <div className="secao_ingresso">
             <h1>venda de ingresso</h1>
