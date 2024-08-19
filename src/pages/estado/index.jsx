@@ -49,12 +49,60 @@ function calcularIngresso(){
 
 const [novaMeta, setNovaMeta] = useState('');
 const [listaMeta, setListaMeta] = useState([]);
+const [editando, setEditando] = useState(-1);
+
+
 function AddMeta() {
     if(novaMeta != '') {
 
-        setListaMeta([...listaMeta, novaMeta])
+        if(editando == -1) {
+            setListaMeta([...listaMeta, novaMeta])
+            setNovaMeta('');
+        }
+        else {
+            listaMeta[editando] = novaMeta;
+            setListaMeta([...listaMeta]);
+            setNovaMeta('');
+            setEditando(-1);
+        }
     }
 }
+
+function tec (e) {
+    if (e.key == 'Enter') {
+        AddMeta('');
+    }  
+}
+
+
+function removerMeta(pos) {
+    listaMeta.splice(pos, 1);
+    setListaMeta([...listaMeta]);
+}
+
+function alterarMeta(pos){
+    setNovaMeta(listaMeta[pos]);
+    setEditando(pos)
+}
+
+const [plano, setPlano] = useState('');
+const [situacao, setSituacao] = useState('');
+const [cor, setCor] = useState('');
+const [listaPlano, setListaplano] = useState([]);
+
+function addPlano() {
+    let novoPlano = {
+        titulo: plano,
+        tempo: situacao,
+        tema: cor
+    }
+
+    setListaplano([...listaPlano, novoPlano]);
+    setPlano('')
+    setSituacao('')
+    setCor('')
+}
+
 
 
 
@@ -72,16 +120,44 @@ function AddMeta() {
           </div>
         </div>
 
+        <div className="planos">
+            <h1>meus planos atuais</h1>
+
+            <div className="entrada">
+                <input type="text" placeholder='meu plano aqui' value={plano} onChange={e => setPlano(e.target.value)} />
+                <input type="text" placeholder='situação plano aqui' value={situacao} onChange={e => setSituacao(e.target.value)} />
+                <input type="text" placeholder='cor' value={cor} onChange={e => setCor(e.target.value)}/>
+                <button onClick={addPlano}>Adcionar Plano</button>
+            </div>
+
+            <div className="lista">
+                {listaPlano.map(item => 
+
+                        <div className='plano'>
+                            <div style={{backgroundColor: item.tema}}> </div>
+                            <h1>{item.titulo}</h1>
+                            <h2>{item.tempo}</h2>
+                        </div>
+
+                )}
+            </div> 
+
+
+
+        </div>
+
         <div className="metas">
             <h1>Metas para os proximos 5 anos </h1>
 
             <div className='infos'>
-                <input type="text" placeholder='digite suas metas' value={novaMeta} onChange={e => setNovaMeta(e.target.value)}/>
+                <input type="text" placeholder='digite suas metas' onKeyUp={tec} value={novaMeta} onChange={e => setNovaMeta(e.target.value)}/>
                 <button onClick={AddMeta}>Adicionar</button>
             </div>
             <ul>
-                {listaMeta.map(item =>
-                    <li>{item}</li>
+                {listaMeta.map((item, pos) =>
+                    <li key={pos}> 
+                        <img id='pen' src="/assets/images/editar.png" onClick={() => alterarMeta(pos)}  /> <img id='lixo' src="/assets/images/lixeira.png" onClick={() => removerMeta(pos)} />{item}
+                    </li>
                 ) }
             </ul>
         </div>
