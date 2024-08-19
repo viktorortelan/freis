@@ -15,7 +15,7 @@ function calculo(){
     } 
 
     setTabuada(tabuadas);
-
+    setNumero('')
 }
 
 

@@ -67,6 +67,12 @@ export default function App() {
               <h1>tabuada</h1>
               <Link to='/exersete'>Exercício 07</Link>
             </div>
+
+            <div className="card8">
+              <div className="blue"></div>
+              <h1>Imc</h1>
+              <Link to='/exeroito'>Exercício 08</Link>
+            </div>
           </div>
         </div>
       </div>

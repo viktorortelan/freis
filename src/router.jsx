@@ -9,6 +9,7 @@ import Evento from "./pages/eventos";
 import Estado from "./pages/estado";
 import LivroExer from "./pages/livroEXer";
 import ExerSete from "./pages/exersete";
+import ExerOito from "./pages/exeroito";
 
 export default function Navegacao() {
   return (
@@ -23,6 +24,7 @@ export default function Navegacao() {
             <Route path="/estado" element={<Estado/>}/>
             <Route path="/livroEXer" element={<LivroExer/>}/>
             <Route path="/exersete" element={<ExerSete/>}/>
+            <Route path="/exeroito" element={<ExerOito/>}/>
 
 
 
