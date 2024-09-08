@@ -1,0 +1,26 @@
+.preto{
+    background-color: #000000;
+}
+
+
+.card {
+    display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 215px;
+  height: 158px;
+  border-radius: 12px;
+  background-color: #fff;
+  h1{
+    font: 700 14px roboto;
+    color: #383131;
+  }
+
+  a{
+    font: 400 14px roboto;
+    color: #383131;
+    text-decoration: none;
+  }
+  }

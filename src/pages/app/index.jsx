@@ -1,7 +1,19 @@
 import "./app.scss";
 import { Link } from "react-router-dom";
+import Card from "../../components/cards";
 
 export default function App() {
+let obj = [
+    {
+      titulo:'teste',
+      cor:"preto",
+      url:'./exerUm',
+      destino:'casa do carai'
+
+    }
+]
+
+
   return (
     <div>
       <div className="maeApp">
@@ -21,59 +33,17 @@ export default function App() {
           <h1>Escolha um treino...</h1>
 
           <div className="cartoes">
-            <div className="card1">
-              <div className="yellow"></div>
-              <h1>Cupom de desconto</h1>
-              <Link to='/exerUm'>Exercício 01</Link>
-            </div>
-
-            <div className="card2">
-              <div className="green"></div>
-              <h1>Converter Kg/gramas</h1>
-              <Link to='/exerDois'>Exercício 02</Link>
-            </div>
-
-            <div className="card3">
-              <div className="blue"></div>
-              <h1>Valor total por quantidade</h1>
-              <Link to='/exerTres'>Exercício 03</Link>
-            </div>
-
-            <div className="card4">
-              <div className="blue"></div>
-              <h1>eventos</h1>
-              <Link to='/eventos'>Exercício 04</Link>
-            </div>
-
+            
+        {obj.map(item => <Card
+        titulo={item.titulo}
+        url={item.url }  
+        cor={item.cor}
+        destino={item.destino}
+        />)}
+            
            
           </div>
 
-          <div className="cartoes2">
-
-          <div className="card5">
-              <div className="blue"></div>
-              <h1>estado</h1>
-              <Link to='/estado'>Exercício 05</Link>
-            </div>
-
-            <div className="card6">
-              <div className="blue"></div>
-              <h1>Livro</h1>
-              <Link to='/livroEXer'>Exercício 06</Link>
-            </div>
-
-            <div className="card7">
-              <div className="blue"></div>
-              <h1>tabuada</h1>
-              <Link to='/exersete'>Exercício 07</Link>
-            </div>
-
-            <div className="card8">
-              <div className="blue"></div>
-              <h1>Imc</h1>
-              <Link to='/exeroito'>Exercício 08</Link>
-            </div>
-          </div>
         </div>
       </div>
     </div>

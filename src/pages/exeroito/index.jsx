@@ -11,6 +11,7 @@ export default function ExerOito() {
     const [mostra, setMostra] = useState([])
     
 
+
         function situacao() {
             let cont = (altura **2) / peso;
 
@@ -21,27 +22,27 @@ export default function ExerOito() {
                 
             }
         
-            else if(cont > 35 && cont <= 39,9){
+            else if(cont > 35 && cont <= 39.9){
         
                 
                 setResposta(`Vc tem obesidade de grau 2`)
                 
             }
         
-            else if(cont > 30 && cont <= 34,9){
+            else if(cont > 30 && cont <= 34.9){
         
                 
                 setResposta(`Vc tem obesidade de grau 1`)
             }
         
-            else if(cont > 25 && cont <= 29,9){
+            else if(cont > 25 && cont <= 29.9){
         
                 
                 setResposta(`Vc tem Sobrepeso`)
         
             }
         
-            else if(cont > 18,5 && cont <= 24,9){
+            else if(cont > 18.5 && cont <= 24.9){
         
                 
                 setResposta(`Vc tem um peso normal`)
@@ -49,7 +50,7 @@ export default function ExerOito() {
             }
         
         
-            else if(cont <= 18,5){
+            else if(cont <= 18.5){
         
              
                 setResposta(`Vc esta abaixo do peso`)
@@ -58,7 +59,17 @@ export default function ExerOito() {
         
         }
 
+        function mostrando() {
+            situacao()
+            let CartaoResposta = {
+                altura: altura, 
+                peso: peso,
+                imc: resposta
+            }
 
+            setMostra([...mostra, CartaoResposta]);
+
+        }
 
     return (
         <div className="exerOito">
@@ -81,7 +92,7 @@ export default function ExerOito() {
           src="https://media.discordapp.net/attachments/837420691666108437/1267483317692010528/seta.png?ex=66a8f353&is=66a7a1d3&hm=a453e369b533049abf9d4ab68bbcf97c6745a57154df36a31733f677d857383d&=&format=webp&quality=lossless"
           alt=""
         />
-        <h1>Exercício 02 - Converter Kg/gramas</h1>
+        <h1>Exercício 08 - IMC</h1>
       </div>
       <div className="linhaGreen"></div>
 
@@ -108,19 +119,19 @@ export default function ExerOito() {
             </div>
             </div>
 
-            <button onClick={situacao}>Calcular</button>
+            <button onClick={mostrando}>Calcular</button>
 
         </div>
 
 
         <div className="resposta">
 
-            <div className="resp">
-                <h1>altura: {altura}  |</h1>
-                <h1>peso: {peso}  |</h1>
-                <h1>situação: {resposta}</h1>
-                <img src="/assets/images/lixin.png" alt="lixo" />
-            </div>
+            {mostra.map(item =>
+                <div className="resp">
+                    <h1>altura: {item.altura}| peso: {item.peso}  | situação: {item.imc} </h1>
+                    <img src="/assets/images/lixin.png" alt="lixo" />
+                </div>
+            )}
             
         </div>
 
